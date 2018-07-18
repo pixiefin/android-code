@@ -6,12 +6,12 @@ import { ExpensePage } from '../expense/expense';
   selector: 'page-signup',
   templateUrl: 'signup.html'
 })
-export class SignupPage {
+export class SignupPage  {
 
   constructor(public navCtrl: NavController) {
   }
   goToExpense(params){
     if (!params) params = {};
-    this.navCtrl.push(ExpensePage);
+    this.navCtrl.setRoot(ExpensePage);
   }
 }

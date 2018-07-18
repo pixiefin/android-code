@@ -3,14 +3,12 @@ import { Platform, Nav } from 'ionic-angular';
 import { StatusBar } from '@ionic-native/status-bar';
 import { SplashScreen } from '@ionic-native/splash-screen';
 
-import { LoginPage } from '../pages/login/login';
+import { ExpensePage } from '../pages/expense/expense';
 import { InvestmentsPage } from '../pages/investments/investments';
 import { InsurancePage } from '../pages/insurance/insurance';
 import { WalletPage } from '../pages/wallet/wallet';
 import { DepositsPage } from '../pages/deposits/deposits';
-
-
-import { ExpensePage } from '../pages/expense/expense';
+import { LoginPage } from '../pages/login/login';
 
 
 
@@ -19,7 +17,7 @@ import { ExpensePage } from '../pages/expense/expense';
 })
 export class MyApp {
   @ViewChild(Nav) navCtrl: Nav;
-    rootPage:any = ExpensePage;
+    rootPage:any = LoginPage;
 
   constructor(platform: Platform, statusBar: StatusBar, splashScreen: SplashScreen) {
     platform.ready().then(() => {

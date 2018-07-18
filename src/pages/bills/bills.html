@@ -1,12 +1,38 @@
 <ion-header>
-  <ion-navbar>
-    <button ion-button menuToggle>
-      <ion-icon name="menu"></ion-icon>
-    </button>
-    <ion-title>
-      Bills
-    </ion-title>
-  </ion-navbar>
+  <ion-grid style="background-color: #488aff;">
+    <ion-row>
+      <ion-col col-2>
+        <ion-buttons start>
+          <button ion-button icon-only menuToggle>
+          <ion-icon name="menu"></ion-icon>
+          </button>
+        </ion-buttons>
+      </ion-col>
+      <ion-col col-9>
+        <ion-navbar color="primary" hideBackButton>
+          <ion-title style="text-align: center">
+          Bills
+          </ion-title>
+        </ion-navbar>  
+      </ion-col>
+    </ion-row>
+  </ion-grid>
+  <ion-toolbar no-border-top>
+    <ion-segment [(ngModel)]="Manager">
+      <ion-segment-button value="ExpenseMonitor" (click)="goToExpense();">
+        <ion-icon name="calculator"></ion-icon>
+        Expense
+      </ion-segment-button>
+      <ion-segment-button value="FinancialHealth" (click)="goToBudget();">
+        <ion-icon name="filing"></ion-icon>
+        FinHealth
+      </ion-segment-button>
+      <ion-segment-button value="BillTracker">
+        <ion-icon name="calendar"></ion-icon>
+        Bills
+      </ion-segment-button>
+    </ion-segment>
+  </ion-toolbar>
 </ion-header>
 <ion-content padding id="page4">
   <div id="bills-container2"></div>

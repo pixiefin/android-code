@@ -5,13 +5,14 @@ import { MyApp } from './app.component';
 import { ExpensePage } from '../pages/expense/expense';
 import { BudgetPage } from '../pages/budget/budget';
 import { BillsPage } from '../pages/bills/bills';
-import { TabsControllerPage } from '../pages/tabs-controller/tabs-controller';
 import { LoginPage } from '../pages/login/login';
 import { SignupPage } from '../pages/signup/signup';
 import { DepositsPage } from '../pages/deposits/deposits';
 import { InvestmentsPage } from '../pages/investments/investments';
 import { InsurancePage } from '../pages/insurance/insurance';
 import { WalletPage } from '../pages/wallet/wallet';
+import { AndroidPermissions } from "@ionic-native/android-permissions";
+import { HTTP } from '@ionic-native/http';
 
 
 import { StatusBar } from '@ionic-native/status-bar';
@@ -23,7 +24,6 @@ import { SplashScreen } from '@ionic-native/splash-screen';
     ExpensePage,
     BudgetPage,
     BillsPage,
-    TabsControllerPage,
     LoginPage,
     SignupPage,
     DepositsPage,
@@ -41,7 +41,6 @@ import { SplashScreen } from '@ionic-native/splash-screen';
     ExpensePage,
     BudgetPage,
     BillsPage,
-    TabsControllerPage,
     LoginPage,
     SignupPage,
     DepositsPage,
@@ -52,6 +51,8 @@ import { SplashScreen } from '@ionic-native/splash-screen';
   providers: [
     StatusBar,
     SplashScreen,
+    AndroidPermissions,
+    HTTP,
     {provide: ErrorHandler, useClass: IonicErrorHandler}
   ]
 })
